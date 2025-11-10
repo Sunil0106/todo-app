@@ -1,0 +1,104 @@
+@use "./customs.scss" as cu;
+body {
+  background: cu.$bg-clr;
+  @include cu.flex(center, flex-start, column);
+  min-height: 100vh;
+  padding: 4rem;
+
+  ///todo-container
+
+  .todo-input-container {
+    width: 100%;
+    max-width: 800px;
+    background: hsla(0, 0%, 0%, 0.199);
+    padding: 1rem;
+    height: 120px;
+    border-radius: 0.3rem 0.3rem 0 0;
+    h1 {
+      text-align: center;
+      width: 100%;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .input-area {
+      @include cu.flex(center, center, row);
+      input {
+        flex: 1;
+        padding: 5px 10px;
+        font-size: 1rem;
+        border: none;
+        height: 25px;
+        border-radius: 0.3rem;
+        transition: all 0.2s ease-in;
+        outline: none;
+        &:focus {
+          outline: 2px solid cu.$bg-clr;
+        }
+      }
+      button {
+        font-size: 1rem;
+        padding: 5px 15px;
+        height: 34px;
+        border: none;
+        border-radius: 0.3rem;
+        background: hsl(50, 80%, 55%);
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+        &:hover {
+          background: hsl(50, 80%, 45%);
+        }
+      }
+    }
+    .info-msg {
+      font-size: 0.8rem;
+      margin-top: 0.7rem;
+      color: cu.$success-clr;
+    }
+
+    .error {
+      color: cu.$error-clr;
+    }
+  }
+
+  //result container
+  .result-container {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(128, 128, 128, 0.726);
+    display: none;
+
+    padding: 1rem;
+    .todo-list {
+      width: 100%;
+      @include cu.flex(center, center, row);
+      border-bottom: 1px solid white;
+      color: white;
+      padding: 0.7rem 0;
+      font-weight: 500;
+      .task-todo {
+        flex: 2;
+      }
+      .date-todo {
+        flex: 1;
+      }
+      .checkboxes {
+        width: 50px;
+        transform: scale(1.5);
+        cursor: pointer;
+      }
+      button {
+        background: cu.$error-clr;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 0.3rem;
+        color: white;
+        cursor: pointer;
+        transition: background 0.2s ease-out;
+        &:hover {
+          background: hsl(0, 72%, 41%);
+        }
+      }
+    }
+  }
+}

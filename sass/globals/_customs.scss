@@ -1,0 +1,11 @@
+$bg-clr: #f4cdd2;
+$error-clr: #dc2626;
+$success-clr: #38a169;
+
+@mixin flex($align, $justify, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: 1rem;
+}

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  background: #f4cdd2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  min-height: 100vh;
+  padding: 4rem;
+}
+body .todo-input-container {
+  width: 100%;
+  max-width: 800px;
+  background: hsla(0, 0%, 0%, 0.199);
+  padding: 1rem;
+  height: 120px;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+body .todo-input-container h1 {
+  text-align: center;
+  width: 100%;
+  color: white;
+  margin-bottom: 1rem;
+}
+body .todo-input-container .input-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+body .todo-input-container .input-area input {
+  flex: 1;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  height: 25px;
+  border-radius: 0.3rem;
+  transition: all 0.2s ease-in;
+  outline: none;
+}
+body .todo-input-container .input-area input:focus {
+  outline: 2px solid #f4cdd2;
+}
+body .todo-input-container .input-area button {
+  font-size: 1rem;
+  padding: 5px 15px;
+  height: 34px;
+  border: none;
+  border-radius: 0.3rem;
+  background: hsl(50, 80%, 55%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+body .todo-input-container .input-area button:hover {
+  background: hsl(50, 80%, 45%);
+}
+body .todo-input-container .info-msg {
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  color: #38a169;
+}
+body .todo-input-container .error {
+  color: #dc2626;
+}
+body .result-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(128, 128, 128, 0.726);
+  display: none;
+  padding: 1rem;
+}
+body .result-container .todo-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 0.7rem 0;
+  font-weight: 500;
+}
+body .result-container .todo-list .task-todo {
+  flex: 2;
+}
+body .result-container .todo-list .date-todo {
+  flex: 1;
+}
+body .result-container .todo-list .checkboxes {
+  width: 50px;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+body .result-container .todo-list button {
+  background: #dc2626;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+body .result-container .todo-list button:hover {
+  background: hsl(0, 72%, 41%);
+}
+
+* {
+  margin: 0;
+}
+*:before, *:after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
