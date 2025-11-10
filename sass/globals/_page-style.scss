@@ -67,8 +67,8 @@ body {
     max-width: 800px;
     background: rgba(128, 128, 128, 0.726);
     display: none;
-
-    padding: 1rem;
+    border-radius: 0 0 0.3rem 0.3rem;
+    padding: 0.5rem 1rem 1rem 1rem;
     .todo-list {
       width: 100%;
       @include cu.flex(center, center, row);
